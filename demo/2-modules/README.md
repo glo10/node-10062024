@@ -1,6 +1,22 @@
-# 3 façons d'appeler les modules
+# Modules
 
-## Exemple avec le module fs
+
+## Standards
+
+2 standards principaux (il en existe d'autres):
+1. Commonjs
+- Par défaut avec npm init (pas besoin de spécifier `"type":"commonjs"`)
+- Utilisation des fonctions require et module.exports
+- On peut utiliser l'extension ***.cjs*** à la place de ***.js*** pour les fichiers du projet
+2. ECMASCRIPT
+- A spécifier `"type":"module"` dans le package.json pour pouvoir utiliser les fonctions import et export
+- Utilisation des fonctions import et export
+- L'import des modules peut se faire de manière asynchrone
+- On peut utiliser l'extension ***.mjs*** à la place de ***.js*** pour les fichiers du projet
+
+## 3 façons d'appeler les modules
+
+### Exemple avec le module fs
 
 1. De manière classique (par défaut) : `import * from node:fs` ou `const fs = require('node:fs')`
 - Exécution des fonctions ***callback***, une fois que l'événement ou le résultat est disponible
