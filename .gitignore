@@ -7,4 +7,6 @@ eslint.config.mjs
 **/node_modules
 .vscode
 **/corrections
-**/ressources
+**/ressources/ex6
+**/ressources/ex7
+**/ressources/ex7
