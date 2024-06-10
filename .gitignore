@@ -1,0 +1,10 @@
+admin
+cours
+**/config/parameters.js
+package-lock.json
+package.json
+eslint.config.mjs
+**/node_modules
+.vscode
+**/corrections
+**/ressources
