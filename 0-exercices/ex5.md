@@ -5,7 +5,7 @@
 ## Spécifications techniques
 
 - Le serveur écoute sur le ***PORT 5000***
-- Créez un dossier src contenant le views
+- Créez un dossier src contenant les views (vues = pages, css, images, etc.)
 - Le dossier views contient 2 pages HTML, index.html et 404.html cf. arborescence ci-dessous
 - Renvoyez la page index.html lorsqu'une requête est envoyée sur la route /
 - Renvoyez la page 404.html lorsqu'une requête est envoyée sur une autre route que /
