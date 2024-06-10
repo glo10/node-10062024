@@ -8,7 +8,7 @@
 - Par défaut avec npm init (pas besoin de spécifier `"type":"commonjs"`)
 - Utilisation des fonctions require et module.exports
 - On peut utiliser l'extension ***.cjs*** à la place de ***.js*** pour les fichiers du projet
-2. ECMASCRIPT
+2. [ECMASCRIPT](https://ecma-international.org/publications-and-standards/standards/ecma-262/)
 - A spécifier `"type":"module"` dans le package.json pour pouvoir utiliser les fonctions import et export
 - Utilisation des fonctions import et export
 - L'import des modules peut se faire de manière asynchrone
