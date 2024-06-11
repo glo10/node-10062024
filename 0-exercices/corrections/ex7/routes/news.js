@@ -9,7 +9,7 @@ router.get('/', (req, res, next) => {
     if(!err) {
       const news = JSON.parse(data)
       const articles = news.rss.channel.item
-      res.render('news/list',  { articles : articles, title : news.rss.channel.title })
+      res.render('news/list',  { articles, title : news.rss.channel.title })
     }
   })
 })
