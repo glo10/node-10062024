@@ -1,0 +1,15 @@
+extends ../layout
+
+block content
+  h1= title
+  main
+  each item in articles
+    div
+      article(class="card")
+        h2= item.title
+        img(src=item.enclosure class="card-img-top" alt="article cover image")
+        div(class="card-body")
+          p
+            small Date : #{item.pubDate}
+          footer
+            a(href="news/" + item.id) Voir en détails
