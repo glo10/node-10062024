@@ -1,0 +1,14 @@
+[
+  {
+    "email": "john@doe.com",
+    "password": "admin"
+  },
+  {
+    "email": "marc@doe.com",
+    "password": "admin"
+  },
+  {
+    "email": "john2@doe.com",
+    "password": "$2b$10$25q8OjIofSLj.uLRO.5iVe7glCvpYePC6lHKmmZy5PhjXhc2df2NO"
+  }
+]
