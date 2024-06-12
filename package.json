@@ -5,12 +5,16 @@
   "main": "index.js",
   "scripts": {
     "test:unit": "vitest",
-    "test:http": "supertest",
+    "test:http:ex5": "supertest tests/routes/ex5.test.mjs",
     "test:e2e": "cypress open",
     "x4": "node --watch 0-exercices/corrections/ex4/index.mjs",
-    "x5": "node --watch 0-exercices/corrections/ex5/src/app.mjs",
+    "x5": "node --watch 0-exercices/corrections/ex5/src/index.mjs",
     "x6": "SET PORT=6000 & node --watch 0-exercices/corrections/ex6/src/app.mjs",
-    "x7": "SET PORT=7000 & node --watch 0-exercices/corrections/ex7/bin/www"
+    "x7": "SET PORT=7000 & node --watch 0-exercices/corrections/ex7/bin/www",
+    "x9": "SET PORT=9000 & node --watch 0-exercices/corrections/ex9/bin/www",
+    "x10": "SET PORT=1000 & node --watch 0-exercices/corrections/ex10/bin/www",
+    "x11": "SET PORT=1100 & node --watch 0-exercices/corrections/ex11/bin/www",
+    "x12": "SET PORT=1200 & node --watch 0-exercices/corrections/ex12/src/app.mjs"
   },
   "author": "Glodie Tshimini",
   "license": "ISC",
