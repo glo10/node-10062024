@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test:unit": "vitest",
-    "test:http:ex5": "supertest tests/routes/ex5.test.mjs",
+    "test:int:ex5": "supertest tests/routes/ex5.test.mjs",
     "test:e2e": "cypress open",
     "x4": "node --watch 0-exercices/corrections/ex4/index.mjs",
     "x5": "node --watch 0-exercices/corrections/ex5/src/index.mjs",
