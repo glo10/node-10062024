@@ -10,14 +10,21 @@
     <input type="text" placeholder="message">
     <input type="submit" value="Envoyer">
   </form>
-   <!-- Importer la partie js client du socket -->
+   <!-- Importer la partie js client du socket disponible depuis le dossier node_modules -->
+   <!-- c'est possible également d'utiliser un CDN 
+   <script src="https://cdn.socket.io/4.7.5/socket.io.min.js" integrity="sha384-2huaZvOR9iDzHqslqwpR87isEmrfxqyWOF7hr7BY6KG0+hVKLoEXMPUJw3ynWuhO" crossorigin="anonymous"></script>
+   -->
+   <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
    <script src="/socket.io/socket.io.js"></script>
    <script>
-    console.log('io', io())
+    console.log('$', $)
+    // fonction io() globale depuis l'import du script js socket.io côté client
     const socket = io('http://localhost:5000')
+    // écoute de l'événement hello (serveur->client)
     socket.on('hello', (data) => {
       alert(data)
     })
+    // emission de l'événement emit (client->serveur)
     socket.emit('hi', 'Merci')
    </script>
 </body>

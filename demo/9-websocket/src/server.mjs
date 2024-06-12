@@ -15,10 +15,11 @@ app.listen(PORT, () => {
 
 const io = new Server(app)
 
+// Tous les événements doivent être à l'intérieur de l'événement connection
 io.on('connection', (socket) => {
   console.log('nouvel utilisateur')
   socket.emit('hello', 'Bienvenue')
   socket.on('hi', (data) => {
-    console.log('message recu du client', data)
+    console.info('message recu du client', data)
   })
 })
