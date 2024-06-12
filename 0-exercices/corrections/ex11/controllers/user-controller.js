@@ -1,11 +1,11 @@
 const DB = require('../classes/db.js')
-const User = require('../models/schemas/user.js')
+const UserModel = require('../models/schemas/user.js')
 
 exports.add = function (req, res) {
   const errorMessage = 'impossible to create new user for the moment'
   new DB().connect()
     .then(() => {
-    const user = new User({...req.body})
+    const user = new UserModel({...req.body})
     user.save()
       .then(doc => {
         if(doc) {

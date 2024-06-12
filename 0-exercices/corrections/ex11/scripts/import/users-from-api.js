@@ -1,5 +1,5 @@
 const https = require('node:https')
-const User = require('../../repositories/user.js')
+const UserRepository = require('../../repositories/user.js')
 const UserImport = require('../../classes/user-import.js')
 const DB = require('../../classes/db.js')
 const UserModel = require('./../../models/schemas/user.js')
@@ -21,7 +21,7 @@ const reader = new Promise((resolve, reject) => {
     })
   }).end()
 })
-const UserRepository = new User(reader, UserModel, new DB())
+const userRepository = new UserRepository(reader, UserModel, new DB())
 
-const importUser = new UserImport(UserRepository)
+const importUser = new UserImport(userRepository)
 importUser.all()
