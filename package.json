@@ -1,0 +1,25 @@
+{
+  "name": "node-10062024",
+  "version": "1.0.0",
+  "description": "---",
+  "main": "index.js",
+  "scripts": {
+    "test:unit": "vitest",
+    "test:http": "supertest",
+    "test:e2e": "cypress open",
+    "x4": "node --watch 0-exercices/corrections/ex4/index.mjs",
+    "x5": "node --watch 0-exercices/corrections/ex5/src/app.mjs",
+    "x6": "SET PORT=6000 & node --watch 0-exercices/corrections/ex6/src/app.mjs",
+    "x7": "SET PORT=7000 & node --watch 0-exercices/corrections/ex7/bin/www"
+  },
+  "author": "Glodie Tshimini",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.4.0",
+    "cypress": "^13.11.0",
+    "eslint": "^9.4.0",
+    "globals": "^15.4.0",
+    "supertest": "^7.0.0",
+    "vitest": "^1.6.0"
+  }
+}
