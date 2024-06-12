@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 const bcrypt = require('bcrypt')
 const userFn = require('../functions/users')
+const authFn = require('../functions/auth')
 const path = require('path')
 
 router.post('/sign-up', function(req, res) {
@@ -51,12 +52,12 @@ router.post('/', function(req, res) {
 
   localUsers
     .then(useFromBack => {
-      return userFn.comparePassword(useFromBack, user)
+      return authFn.comparePassword(useFromBack, user)
     })
     .then(result => {
       console.log('result', result)
       if(result.isSame === true) {
-        const token = userFn.generateToken(user)
+        const token = authFn.generateToken(user)
         console.log('token', token)
         res.json({ email : user.email, token })
       }
