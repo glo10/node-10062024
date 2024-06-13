@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forum</title>
+</head>
+<body>
+  <h1>Forum</h1>
+    <div></div>
+    <form action="">
+      <input type="text" placeholder="message">
+      <input type="submit" value="Envoyer">
+    </form>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      const socket = io('http://localhost:8000')
+      const div = document.querySelector('div')
+      const h1 = document.querySelector('h1')
+      const form = document.querySelector('form')
+      socket.on('app:logged', (message) => {
+        setTimeout(()=> {
+          h1.innerHTML = message
+        }, 2000)
+      })
+
+      socket.on('app:new-message', (message) => {
+        div.innerHTML += `<p>${message}</p>`
+      })
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault()
+        const input = document.querySelector('[type=text]')
+        socket.emit('app:new-message', input.value)
+        input.value = ''
+      })
+    </script>
+</body>
+</html>
