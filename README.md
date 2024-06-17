@@ -57,6 +57,15 @@
 
 ### Testing
 
-- [Jest](https://jestjs.io/docs/getting-started)
-- [Vitest](https://vitest.dev/guide/)
-- [Cypress](https://www.cypress.io/)
+- [Jest](https://jestjs.io/docs/getting-started) : tests unitaires et d'intégration
+- [Vitest](https://vitest.dev/guide/)  : tests unitaires et d'intégration
+- [Supertest](https://www.npmjs.com/package/supertest) : tests d'intégration
+- [Cypress](https://www.cypress.io/)  : tests fonctionnels (E2E)
+
+---
+
+## Lancement des tests
+
+- Unitaires avec : `npm run test:unit`
+- Intégration : `npm run test:int:ex5`
+- E2E : `npm run test:e2e`
